@@ -43,7 +43,7 @@ clusterDistance <- as.matrix(corDist(medianExpr))
 # fishPanel = c('RORB', 'CUX1', 'FOXP2')
 # runGenes = c(runGenes, fishPanel[2])
 # save(fishPanel, file = 'humanCorticalCellMarkerGenes1000.RData')
-load('humanCorticalCellMarkerGenes1000.RData')
+load('humanMTGCellMarkerGenes1000.RData')
 for (pS in 1:panelSize){
   print(pS)
   
@@ -59,7 +59,7 @@ for (pS in 1:panelSize){
     clusterDistance = clusterDistance,                # Cluster distance matrix (potentiall multiplied by weight matrix)
     percentSubset = 100                               # Only consider a certain percent of genes each iteration to speed up calculations (in most cases this is not recommeded)
   )
-  save(fishPanel, file = 'humanCorticalCellMarkerGenes1000.RData')
+  save(fishPanel, file = 'humanMTGCellMarkerGenes1000.RData')
 }
 
 ## Plot of median expression of top50 genes
