@@ -69,11 +69,11 @@ order = order[order != 'no class']
 ht1 = Heatmap(medianExpr[fishPanel[1:50], order], name = "log2(counts+1)",
               column_title = 'Top 50 human MTG cell type markers',
               cluster_columns = FALSE, cluster_rows = FALSE)
-pdf(file = '/home/jovyan/cellTypeMarkers/KptnHomMouse/KptnHomMouseSubtypeMarkers.pdf', width = 21, height = 14)
 ht1
-dev.off()
 
 write.csv(fishPanel, file = 'top100humanMTGcellMarkers.csv', quote = F, row.names = F, col.names = F)
+
+
 
 
 

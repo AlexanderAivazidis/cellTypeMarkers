@@ -28,6 +28,10 @@ ht1 = Heatmap(meanExpr[genes2,c(cellGroupsUp, cellGroupsDown, colnames(meanExpr)
               column_title = 'Cell type markers',
               cluster_columns = FALSE, cluster_rows = FALSE)
 
+pdf(file = '/home/jovyan/cellTypeMarkers/KptnHomMouse/KptnHomMouseSubtypeMarkers.pdf', width = 21, height = 14)
+ht1
+dev.off()
+
 ### Chosen probes: for marking Neuron.Gad1Gad2.Drd1-Fos and Neuron.Gad1Gad2.Pvalb-Rgs12
 
 # 517708      RNAscope® 2.5 LS Probe - Mm-Rgs12-XHs RNAscope LS 2.5 Target Probes       1 Mus musculus        Rgs12
